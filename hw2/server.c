@@ -14,7 +14,7 @@ int main(int argc, char* argv[]){
 	char opCount, operators[128];
 	int operands[128], result;
 	struct sockaddr_in servaddr, cliaddr;
-	socklen_t len = 0; //초기화 해줘야 메모리 할당됨.
+	socklen_t len = sizeof(struct sockaddr_in); 
 
 	if(argc<2){
 		printf("usage:./server localPort\n");
